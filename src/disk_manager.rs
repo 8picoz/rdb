@@ -8,7 +8,7 @@ use std::io::Write;
 use std::path::Path;
 
 use crate::constant::PAGE_SIZE;
-use crate::page_id::PageId;
+use crate::ids::PageId;
 
 pub struct DiskManager {
     heap_file: File,
