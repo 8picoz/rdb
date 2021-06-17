@@ -7,12 +7,12 @@ use std::io::SeekFrom;
 use std::io::Write;
 use std::path::Path;
 
+use crate::constant::PAGE_SIZE;
+
 pub struct DiskManager {
     heap_file: File,
     next_page_id: u64,
 }
-
-const PAGE_SIZE: usize = 4096;
 
 impl DiskManager {
     pub fn new(heap_file: File) -> io::Result<Self> {
