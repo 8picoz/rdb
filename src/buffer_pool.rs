@@ -30,7 +30,7 @@ impl BufferPool {
     }
 
     //Clock-sweep
-    fn evict(&mut self) -> Option<BufferId> {
+    pub fn evict(&mut self) -> Option<BufferId> {
         let pool_size = self.size();
         let mut consecutibe_pinned = 0;
         let victim_id = loop {

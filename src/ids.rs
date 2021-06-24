@@ -1,6 +1,7 @@
 use std::usize;
 
 
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct PageId(pub u64);
 
 impl PageId {
